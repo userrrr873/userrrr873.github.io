@@ -1,4 +1,4 @@
-/* Հիմնական ձևավորում */
+/* Հիմնական ստիլներ */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,6 @@ body {
     color: #333;
     padding: 20px;
     overflow-x: hidden;
-    transition: all 0.5s ease-in-out;
 }
 
 .container {
@@ -92,7 +91,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
-    transition: all 0.5s ease-in-out;
 }
 
 .content {
@@ -117,7 +115,6 @@ body {
     font-size: 28px;
     color: #666;
     margin-bottom: 25px;
-    transition: color 0.5s ease;
 }
 
 .buy-button {
@@ -202,6 +199,7 @@ body {
     opacity: 1;
 }
 
+/* Media queries փոքր սարքերի համար */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
@@ -214,63 +212,17 @@ body {
     .image {
         width: 100%;
     }
-}
 
-.order-section {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 50px auto;
-}
+    .container {
+        padding: 15px;
+    }
 
-.order-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.order-section label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.order-section input,
-.order-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.order-section button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #f12711;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.order-section button:hover {
-    background-color: #f5af19;
-}
-
-/* Ավելացնել լրացուցիչ media queries փոքր էկրանների համար */
-@media (max-width: 480px) {
     .header h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .menu li a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .content h2 {
@@ -278,11 +230,66 @@ body {
     }
 
     .content p {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .buy-button {
         font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+
+    .buy-button {
+        font-size: 16px;
         padding: 10px 20px;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .order-section {
+        padding: 10px;
+    }
+
+    .order-section h2 {
+        font-size: 24px;
+    }
+
+    .order-section input,
+    .order-section textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .order-section button {
+        font-size: 16px;
+        padding: 12px;
     }
 }
