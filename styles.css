@@ -1,4 +1,3 @@
-/* Հիմնական ստիլներ */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +10,7 @@ body {
     color: #333;
     padding: 20px;
     overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
 }
 
 .container {
@@ -91,6 +91,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .content {
@@ -115,6 +116,7 @@ body {
     font-size: 28px;
     color: #666;
     margin-bottom: 25px;
+    transition: color 0.5s ease;
 }
 
 .buy-button {
@@ -199,7 +201,6 @@ body {
     opacity: 1;
 }
 
-/* Media queries փոքր սարքերի համար */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
@@ -212,84 +213,67 @@ body {
     .image {
         width: 100%;
     }
-
-    .container {
-        padding: 15px;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .menu li a {
-        font-size: 16px;
-    }
-
-    .content h2 {
-        font-size: 36px;
-    }
-
-    .content p {
-        font-size: 24px;
-    }
-
-    .buy-button {
-        font-size: 18px;
-        padding: 12px 25px;
-    }
+}
+.order-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
 }
 
-@media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.order-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-    .header h1 {
-        font-size: 24px;
-    }
+.order-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-    .menu {
-        gap: 15px;
-    }
+.order-section input,
+.order-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-    .menu li a {
-        font-size: 14px;
-    }
+.order-section button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f12711;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .content h2 {
-        font-size: 30px;
-    }
+.order-section button:hover {
+    background-color: #f5af19;
+}
+.order-section {
+    text-align: center;
+    margin-top: 50px;
+}
 
-    .content p {
-        font-size: 20px;
-    }
+.order-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
 
-    .buy-button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .image {
-        width: 100%;
-    }
-
-    .order-section {
-        padding: 10px;
-    }
-
-    .order-section h2 {
-        font-size: 24px;
-    }
-
-    .order-section input,
-    .order-section textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .order-section button {
-        display: inline-block;
+.order-button {
+    display: inline-block;
     padding: 15px 30px;
     background-color: #333;
     color: white;
@@ -297,13 +281,67 @@ body {
     border-radius: 30px;
     font-size: 20px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    margin-top: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .order-section button:hover {
+}
+
+.order-button:hover {
     background-color: #f12711;
     transform: scale(1.15);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
+.order-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #f12711;
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f12711;
 }
